@@ -1,0 +1,5 @@
+# Files are not committed here; these hashes identify the local experiment inputs/artifacts.
+ed0ccef591955bc5b0141dfe3d8dd45f9c6f2fe61c8e16a32fc33cd0751b403e  data/QM9/processed/geometric_data_processed.pt
+636295991f17b46bd912bf28e72fb6f0666217e28bfc8b44f1bd45886c1ccf96  outputs/stage_06_qm9_tiny_training/real_qm9_tiny_checkpoint.pt
+e54594c03ef96a6925baccfc0811f00cb6deb262bf75d2833ef154d3a86b47da  latent_cache/stage_07_qm9_tiny/representations.npz
+

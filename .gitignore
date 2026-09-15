@@ -1,0 +1,14 @@
+.DS_Store
+.venv/
+__pycache__/
+*.pyc
+
+# Large or reproducible assets
+data/
+ckpt/
+*.pt
+*.pth
+
+# Generated caches can be regenerated from the documented scripts.
+latent_cache/*.npz
+

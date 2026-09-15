@@ -1,0 +1,85 @@
+{
+  "environment": {
+    "platform": "macOS-26.3.1-arm64",
+    "python": "3.9.6",
+    "torch": "2.3.1",
+    "device": "cpu",
+    "mps_built": true,
+    "mps_available": false
+  },
+  "stage_02_geometry": {
+    "canonical_tokens_equal": true,
+    "frame_determinant": 1.0,
+    "inertial_centroid_max_abs": 3.5762788286319847e-08,
+    "inertial_max_abs_error": 1.341104507446289e-06,
+    "nystrom_factor_shape": [2, 24, 24],
+    "nystrom_factors_finite": true,
+    "attention_fallback_checks": "passed",
+    "geometry_mechanism_checks": "passed"
+  },
+  "stage_03_synthetic_tiny_training": {
+    "num_molecules": 2,
+    "num_tokens": 9,
+    "logits_shape": [9, 119],
+    "molecule_repr_shape": [2, 64],
+    "optimizer_step": true
+  },
+  "stage_04_tiny_generation": {
+    "official_checkpoint_used": false,
+    "checkpoint_reload": true,
+    "num_generated": 2,
+    "generated_atom_counts": [4, 4],
+    "validity": 1.0,
+    "uniqueness": 0.5,
+    "atom_stability": 0.0,
+    "molecule_stability": 0.0,
+    "interpretation": "Pipeline smoke test using an untrained random tiny model"
+  },
+  "stage_05_real_qm9_smoke": {
+    "dataset_len": 130754,
+    "num_classes": 641,
+    "num_molecules": 4,
+    "num_tokens": 26,
+    "cu_seqlens": [0, 6, 11, 16, 26],
+    "max_len": 10,
+    "logits_shape": [26, 119],
+    "molecule_repr_shape": [4, 64],
+    "loss": 3.968348979949951,
+    "token_loss": 4.779123783111572,
+    "position_loss": 3.765655040740967,
+    "grad_norm": 5.4299421310424805,
+    "optimizer_step": true,
+    "elapsed_seconds": 4.451102018356323,
+    "max_rss_mb": 1340.21875
+  },
+  "stage_06_real_qm9_tiny_training": {
+    "sample_count": 32,
+    "num_updates": 8,
+    "batch_size": 4,
+    "loss_first": 2.94545841217041,
+    "loss_last": 3.153749465942383,
+    "token_loss_first": 4.779123783111572,
+    "token_loss_last": 4.713702201843262,
+    "checkpoint_reload": true,
+    "elapsed_seconds": 4.477893114089966,
+    "max_rss_mb": 1346.390625
+  },
+  "stage_07_representation_probe": {
+    "cache_count": 256,
+    "representation_dim": 64,
+    "representations": [
+      "r_input",
+      "r_context_init",
+      "r_context",
+      "r_type_context",
+      "r_coord_condition",
+      "r_molecule"
+    ],
+    "condition_mode": "constant null condition",
+    "train_count": 192,
+    "test_count": 64,
+    "split_seed": 42,
+    "official_checkpoint_used": false
+  }
+}
+
